@@ -20,7 +20,7 @@ import (
 	"runtime"
 	"strings"
 
-	"colt/soong/android"
+	"colt/soong/android_colt"
 
 	"github.com/google/blueprint/proptools"
 )
@@ -98,7 +98,7 @@ type variableProperties struct {
 		}
 
 		// include Colt variables
-		Colt android.Product_variables
+		Colt android_colt.Product_variables
 	} `android:"arch_variant"`
 }
 
@@ -174,7 +174,7 @@ type productVariables struct {
 	DeviceKernelHeaders []string `json:",omitempty"`
 
 	// include Colt variables
-	Colt android.ProductVariables
+	Colt android_colt.ProductVariables
 }
 
 func boolPtr(v bool) *bool {
